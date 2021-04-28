@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    background-color: #F1DDCF;
+}
+
+header {
+    background-color: #FDF3EC;
+    height: 240px;
+    margin: 0;
+
+}
+
+h2 {
+    font-family: "Fira sans", sans-serif;
+    font-size: 38px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+h3 {
+    font-family: "Fira sans", sans-serif;
+    font-size: 28px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #FF8676;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 205px;
+}
+
+.search-icon {
+    width: 65px;
+}
+
+.nav-flex {
+    width: 100%;
+}
+
+
+.nav-item-1 {
+    display: inline-block;
+    position: absolute;
+    top: 110px;
+    left: 8%;
+}
+
+.nav-item-2 {
+    margin: 0 auto;
+    padding: 150px 0 0;
+    width: 650px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    position: relative;
+}
+
+.nav-item-3 {
+    display: inline-block;
+    position: absolute;
+    top: 110px;
+    right: 8%;
+    cursor: pointer;
+}
+
+li {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 22px;
+    font-weight: 100;
+
+}
+
+.show-hide {
+    display: none;
+}
+
+.active {
+    color: #FF8676
+}
+
+.to-top {
+    width: 60px;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+}
+
+.index-container {
+    width: 55%;
+    margin: 100px auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carousel a {
+    background-color: white;
+}
+
+.carousel-img {
+    width: 290px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-title {
+    max-width: 290px;
+    max-height: 100px;
+    background-color: white;
+}
+
+.carousel-title h3 {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.dropdown {
+    position: absolute;
+    top: 170px;
+    left: 255px;
+}
+
+
+
+.dropdown-menu {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FDF3EC;
+}
+
+.dropdown-menu a {
+    text-align: center;
+    padding-bottom: 40px;
+}
