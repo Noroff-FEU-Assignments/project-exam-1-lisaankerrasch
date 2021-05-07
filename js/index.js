@@ -1,9 +1,9 @@
 const url = "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts?_embed";
-const popularUrl =
-  "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts?category=33";
+const popularUrl = "https://peckish.lisa-noroff.no/wp-json/wp/v2/categories/61";
 
 const carouselContainer = document.querySelector(".carousel");
 const popularContainer = document.querySelector(".popular-container");
+const drinksContainer = document.querySelector(".drinks-container");
 
 async function getCarousel() {
   try {
@@ -72,3 +72,37 @@ async function getPopular() {
 }
 
 getPopular();
+
+async function getDrinks() {
+  try {
+    const response = await fetch(popularUrl);
+    const blogList = await response.json();
+
+    const blog = blogList;
+
+    console.log(blogList);
+
+    for (let i = 0; i < blogList.length; i++) {
+      if (i === 4) {
+        break;
+      }
+      drinksContainer.innerHTML += `
+    <div class="drinks-item">
+        <a href="blogpost.html?id=${blog[i].id}">
+            <img class="drinks-img" src="${blog[i]._embedded["wp:featuredmedia"]["0"].source_url}"
+            alt="${blog[i].title.rendered}">
+
+            <div class="drinks-title">
+            <h3>${blog[i].title.rendered}</h3>
+            </div>
+           
+         </a>
+    </div>
+     `;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getDrinks();
