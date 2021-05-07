@@ -22,7 +22,7 @@ async function createHTML(details) {
 
     console.log(blogPost);
 
-    blogContainer.innerHTML += `<div class="blogpost">
+    blogContainer.innerHTML += `<div class="blogpostpage">
 
     <h1 class="uppercase">${blog.title.rendered}</h1>
     <p>Published: ${blog.date}</p>
@@ -50,7 +50,8 @@ async function createComment(details) {
 
     commentContainer.innerHTML += `<div class="comments">
   
-      <h3 class="uppercase">${comments.author_name}</h3>
+      <h5>${comments.author_name}</h5>
+
       <p>Published: ${comments.date}</p>
   
      <p> ${comments.content.rendered}<br><br> </p>

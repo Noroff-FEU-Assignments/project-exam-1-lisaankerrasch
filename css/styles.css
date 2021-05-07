@@ -34,6 +34,12 @@ h4 {
 
 }
 
+h5 {
+    font-family: "Fira sans,"sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -233,7 +239,7 @@ input::placeholder {
 
 .carousel-title {
     max-width: 90%;
-    max-height: 100px;
+    min-height: 100px;
     background-color: white;
 }
 
@@ -545,43 +551,100 @@ input::placeholder {
 
 /* Blog specific page */
 
-.blogpost {
+.blogpostpage {
     margin-top: 100px;
     background: white;
     padding: 70px;
 }
 
-.blogpost h1 {
+.blogpostpage h1 {
     font-family: "Fira sans", sans-serif;
     font-size: 48px;
     margin: 0;
 }
 
-.blogpost h2 {
+.blogpostpage h2 {
     font-family: "Fira sans", sans-serif;
     font-size: 28px;
     margin: 30px 0 15px;
     text-align: left;
 }
 
-.blogpost h3 {
+.blogpostpage h3 {
     font-family: "Fira sans", sans-serif;
     font-size: 22px;
     margin: 30px 0 15px;
     text-align: left;
 }
 
-.blogpost img {
+.blogpostpage img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
     margin: 50px 0;
 }
 
-.blogpost li {
+.blogpostpage li {
     list-style: none;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
+}
+
+.ingredient-flex {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.recipe-details-flex {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.recipe-details-flex p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.portions,
+.time,
+.timer {
+    font-family: "Fira sans", sans-serif;
+    text-align: center;
+    height: auto;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+.portions {
+    background-color: #FF8676;
+    width: 120px;
+
+}
+
+.time {
+    background-color: #FABCB4;
+    width: 150px;
+}
+
+.timer {
+    background-color: #FFF476;
+    border: none;
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+
+    margin: 30px 0;
 }
 
 .comment-container {
@@ -589,8 +652,13 @@ input::placeholder {
     margin: 0 auto;
 }
 
+.comment-container h4 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .comments {
-    background-color: #FFBEB5;
+    background-color: white;
     padding: 60px;
 }
 
