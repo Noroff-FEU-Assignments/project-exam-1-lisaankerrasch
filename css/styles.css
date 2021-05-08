@@ -213,7 +213,9 @@ input::placeholder {
 
 .contact-container,
 .about-container,
-.blog-container {
+.blog-container,
+.more-container,
+.recipe-container {
     width: 55%;
     margin: 50px auto 100px;
 
@@ -614,7 +616,8 @@ input::placeholder {
 
 .portions,
 .time,
-.timer {
+.timer,
+.load-more {
     font-family: "Fira sans", sans-serif;
     text-align: center;
     height: auto;
@@ -643,8 +646,17 @@ input::placeholder {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-
     margin: 30px 0;
+}
+
+.load-more {
+    background-color: #FFF476;
+    border: none;
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 30px auto;
 }
 
 .comment-container {
@@ -678,6 +690,46 @@ figure {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+/* Recipes */
+
+.recipe-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-item-1,
+.recipe-item-2,
+.recipe-item-3,
+.recipe-item-4,
+.recipe-item-5,
+.recipe-item-6,
+.recipe-item-7,
+.recipe-item-8,
+.recipe-item-9 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 30px;
+    margin: 10px;
+
+
+}
+
+.recipe-item-1,
+.recipe-item-6 {
+    width: 25%;
+    background-color: #FF8676;
+}
+
+.recipe-item-2,
+.recipe-item-9 {
+    width: 30%;
+    background-color: #FFBEB5;
+}
+
 
 /* Footer */
 

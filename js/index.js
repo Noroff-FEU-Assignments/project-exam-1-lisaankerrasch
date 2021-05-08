@@ -1,5 +1,8 @@
 const url = "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts?_embed";
-const popularUrl = "https://peckish.lisa-noroff.no/wp-json/wp/v2/categories/61";
+const popularUrl =
+  "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts?_embed&categories=64";
+const drinkUrl =
+  "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts?_embed&categories=61";
 
 const carouselContainer = document.querySelector(".carousel");
 const popularContainer = document.querySelector(".popular-container");
@@ -41,7 +44,7 @@ getCarousel();
 
 async function getPopular() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(popularUrl);
     const blogList = await response.json();
 
     const blog = blogList;
@@ -75,7 +78,7 @@ getPopular();
 
 async function getDrinks() {
   try {
-    const response = await fetch(popularUrl);
+    const response = await fetch(drinkUrl);
     const blogList = await response.json();
 
     const blog = blogList;
