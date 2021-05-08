@@ -794,6 +794,10 @@ figure {
     margin-bottom: 70px;
 }
 
+.recipe-flex a:hover {
+    color: black;
+}
+
 
 
 
