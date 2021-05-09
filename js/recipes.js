@@ -39,6 +39,7 @@ getPopular();
 const categoryUrl =
   "https://peckish.lisa-noroff.no/wp-json/wp/v2/categories?per_page=30";
 const recipeContainer = document.querySelector(".recipes");
+const cuisineContainer = document.querySelector(".cuisine");
 
 async function getCategories() {
   try {
@@ -47,31 +48,55 @@ async function getCategories() {
 
     console.log(categories);
 
-    for (let i = 0; i < categories.length; i++) {
-      if (i === 1) {
-        break;
-      }
-      recipeContainer.innerHTML += `<div class="recipe-flex">
-      <a href="result.html?categories=${categories[i].id}" class="recipe-item-1">${categories[15].name}</a>
-      <a href="result.html?id=${categories[i].id}" class="recipe-item-2">${categories[2].name}</a>
-      <a href="result.html?id=${categories[i].id}" class="recipe-item-3">${categories[10].name}</a>
-    </div>
-    <div class="recipe-flex">
-    <a href="result.html?id=${categories[i].id}" class="recipe-item-4">${categories[4].name}</a>
-    <a href="result.html?id=${categories[i].id}" class="recipe-item-5">${categories[19].name}</a>
-    <a href="result.html?id=${categories[i].id}" class="recipe-item-6">${categories[13].name}</a>
-    </div>
-    <div class="recipe-flex">
-    <a href="result.html?id=${categories[i].id}" class="recipe-item-7">${categories[21].name}</a>
-    <a href="result.html?id=${categories[i].id}" class="recipe-item-8">${categories[23].name}</a>
-    <a href="result.html?id=${categories[i].id}" class="recipe-item-9">${categories[11].name}</a>
+    recipeContainer.innerHTML += `<div class="recipe-flex">
+      <a href="result.html?id=${categories[15].id}" class="recipe-item-1">${categories[15].name}</a>
+      <a href="result.html?id=${categories[2].id}" class="recipe-item-2">${categories[2].name}</a>
+      <a href="result.html?id=${categories[10].id}" class="recipe-item-3">${categories[10].name}</a>
+   
+    
+    <a href="result.html?id=${categories[4].id}" class="recipe-item-4">${categories[4].name}</a>
+    <a href="result.html?id=${categories[19].id}" class="recipe-item-5">${categories[19].name}</a>
+    <a href="result.html?id=${categories[29].id}" class="recipe-item-6">${categories[29].name}</a>
+    
+    
+    <a href="result.html?id=${categories[21].id}" class="recipe-item-7">${categories[21].name}</a>
+    <a href="result.html?id=${categories[23].id}" class="recipe-item-8">${categories[23].name}</a>
+    <a href="result.html?id=${categories[11].id}" class="recipe-item-9">${categories[11].name}</a>
     </div>
       
          `;
-    }
   } catch (error) {
     console.log(error);
   }
 }
 
 getCategories();
+
+async function getCuisines() {
+  try {
+    const response = await fetch(categoryUrl);
+    const cuisine = await response.json();
+
+    cuisineContainer.innerHTML += `<div class="recipe-flex">
+        <a href="result.html?id=${cuisine[1].id}" class="cuisine-item-1">${cuisine[1].name}</a>
+        <a href="result.html?id=${cuisine[12].id}" class="cuisine-item-2">${cuisine[12].name}</a>
+        <a href="result.html?id=${cuisine[14].id}" class="cuisine-item-3">${cuisine[14].name}</a>
+     
+      
+      <a href="result.html?id=${cuisine[18].id}" class="cuisine-item-4">${cuisine[18].name}</a>
+      <a href="result.html?id=${cuisine[22].id}" class="cuisine-item-5">${cuisine[22].name}</a>
+      <a href="result.html?id=${cuisine[24].id}" class="cuisine-item-6">${cuisine[24].name}</a>
+      
+      
+      <a href="result.html?id=${cuisine[25].id}" class="cuisine-item-7">${cuisine[25].name}</a>
+      <a href="result.html?id=${cuisine[23].id}" class="cuisine-item-8">${cuisine[23].name}</a>
+      <a href="result.html?id=${cuisine[0].id}" class="cuisine-item-9">${cuisine[0].name}</a>
+      </div>
+        
+           `;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getCuisines();

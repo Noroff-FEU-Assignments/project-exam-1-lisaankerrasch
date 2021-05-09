@@ -70,6 +70,8 @@ a:hover {
     position: fixed;
     bottom: 60px;
     right: 60px;
+    cursor: pointer;
+
 }
 
 .screenreader {
@@ -148,6 +150,7 @@ li {
     display: flex;
     flex-direction: column;
     background-color: #FDF3EC;
+    padding-top: 40px;
 }
 
 .dropdown-menu a {
@@ -215,7 +218,8 @@ input::placeholder {
 .about-container,
 .blog-container,
 .more-container,
-.recipe-container {
+.recipe-container,
+.result-container {
     width: 55%;
     margin: 50px auto 100px;
 
@@ -706,6 +710,7 @@ figure {
 .recipe-flex {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .recipe-item-1,
@@ -767,12 +772,12 @@ figure {
 .cuisine-item-4,
 .cuisine-item-9 {
     background-color: #FCF9DF;
-    width: 35%;
+    width: 30%;
 }
 
 .recipe-item-4,
 .recipe-item-8 {
-    width: 30%;
+    width: 25%;
 }
 
 .cuisine-item-3,
@@ -798,6 +803,55 @@ figure {
     color: black;
 }
 
+/* Results */
+
+.result-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.result-item {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.result-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.result-title {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+}
+
+.result-title h3 {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.loader {
+    margin: 50px auto;
+    border: 10px solid white;
+    border-top: 10px solid #FF8676;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 
 
