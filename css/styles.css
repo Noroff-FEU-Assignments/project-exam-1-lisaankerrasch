@@ -35,7 +35,7 @@ h4 {
 }
 
 h5 {
-    font-family: "Fira sans,"sans-serif;
+    font-family: "Fira sans", sans-serif;
     font-size: 28px;
     margin-bottom: 20px;
 }
@@ -1227,7 +1227,8 @@ footer p {
 
     .about-container,
     .recipe-container,
-    .result-container {
+    .result-container,
+    .comment-container {
         width: 80%;
         margin-bottom: 50px;
     }
@@ -1368,7 +1369,16 @@ footer p {
         margin-bottom: 50px;
     }
 
+    .comments {
+        padding: 20px;
+    }
+
+    .comments h5 {
+        font-size: 22px;
+    }
+
     /* Recipes */
+
     .recipe-flex {
         display: flex;
         flex-direction: column;
