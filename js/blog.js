@@ -1,6 +1,10 @@
-const url = "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts?_embed";
+const url =
+  "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts?_embed&per_page=20";
 const blogPost = document.querySelector(".blogpost");
-const moreContainer = document.querySelector(".more-container");
+const loader = document.querySelector(".loader");
+const moreUrl =
+  "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts?_embed&per_page=20&offset=10";
+const loadButton = document.querySelector(".load-more");
 
 async function getBlogposts() {
   try {
@@ -11,7 +15,13 @@ async function getBlogposts() {
 
     console.log(blogList);
 
+    loader.classList.add("show-hide");
+    loadButton.classList.remove("show-hide");
+
     for (let i = 0; i < blogList.length; i++) {
+      if (i === 10) {
+        break;
+      }
       blogPost.innerHTML += `
     <div class="blogpost-block">
         <div class="blogpost-block-1">
@@ -32,32 +42,29 @@ async function getBlogposts() {
   }
 }
 
-const moreUrl =
-  "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts?_embed&offset=10";
+getBlogposts();
 
-const loadButton = document.querySelector(".load-more");
-
-async function getMore() {
+loadButton.onclick = async function getMore() {
   try {
     const response = await fetch(moreUrl);
     const moreList = await response.json();
 
-    const more = moreList;
-
     console.log(moreList);
 
-    for (let i = 11; i < moreList.length; i++) {
-      moreContainer.innerHTML += `
+    loadButton.classList.add("show-hide");
+
+    for (let i = 0; i < moreList.length; i++) {
+      blogPost.innerHTML += `
             <div class="blogpost-block">
                 <div class="blogpost-block-1">
                     <img src="${moreList[i]._embedded["wp:featuredmedia"]["0"].source_url}"
-                    alt="${more[i].title.rendered}">
+                    alt="${moreList[i].title.rendered}">
                     </div>
                 <div class="blogpost-block-2">
                     <div class="blogpost-block-text">
-                    <a href="blogpost.html?id=${more[i].id}"><h4>${more[i].title.rendered}</h4></a>
-                        <p>${more[i].excerpt.rendered}</p>
-                        <a href="blogpost.html?id=${more[i].id}">Read more...</a>
+                    <a href="blogpost.html?id=${moreList[i].id}"><h4>${moreList[i].title.rendered}</h4></a>
+                        <p>${moreList[i].excerpt.rendered}</p>
+                        <a href="blogpost.html?id=${moreList[i].id}">Read more...</a>
                     </div>
             </div>
         `;
@@ -65,7 +72,4 @@ async function getMore() {
   } catch (error) {
     console.log(error);
   }
-}
-
-getBlogposts();
-getMore();
+};
