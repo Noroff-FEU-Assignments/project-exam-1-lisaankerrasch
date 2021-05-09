@@ -534,7 +534,7 @@ input::placeholder {
 }
 
 .blogpost-block img {
-    max-width: 550px;
+    width: 100%;
     height: 550px;
     min-width: none;
     object-fit: cover;
@@ -1069,7 +1069,7 @@ footer p {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     .popular-item,
@@ -1225,7 +1225,9 @@ footer p {
 
     /* About */
 
-    .about-container {
+    .about-container,
+    .recipe-container,
+    .result-container {
         width: 80%;
         margin-bottom: 50px;
     }
@@ -1300,8 +1302,131 @@ footer p {
         color: #FF8676;
     }
 
+    /* Blogpost page */
+
+    .blog-container {
+        width: 80%;
+    }
+
+    .blogpostpage {
+        margin-top: 50px;
+        background: white;
+        padding: 20px;
+    }
+
+    .blogpostpage h1 {
+        font-family: "Fira sans", sans-serif;
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .recipe-details-flex {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
 
 
+    .portions,
+    .time,
+    .timer,
+    .load-more {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .portions {
+        width: auto;
+    }
+
+    .time {
+        width: auto;
+    }
+
+    .blogpostpage img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin: 20px 0;
+    }
+
+    .blogpostpage h2 {
+        font-family: "Fira sans", sans-serif;
+        font-size: 22px;
+        margin: 15px 0 15px;
+        text-align: left;
+    }
+
+    .ingredient-flex {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    /* Recipes */
+    .recipe-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recipe-item-1,
+    .recipe-item-2,
+    .recipe-item-3,
+    .recipe-item-4,
+    .recipe-item-5,
+    .recipe-item-6,
+    .recipe-item-7,
+    .recipe-item-8,
+    .recipe-item-9,
+    .cuisine-item-1,
+    .cuisine-item-2,
+    .cuisine-item-3,
+    .cuisine-item-4,
+    .cuisine-item-5,
+    .cuisine-item-6,
+    .cuisine-item-7,
+    .cuisine-item-8,
+    .cuisine-item-9 {
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    .popular-recipes {
+        margin: 0 auto;
+    }
+
+    .recipes {
+        margin-bottom: 40px;
+    }
+
+    /* Results */
+
+    .result-item {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 50px;
+    }
+
+    .result-img {
+        width: 250px;
+    }
+
+    .result-title {
+        background-color: white;
+        text-align: center;
+        width: 250px;
+        height: 100px;
+    }
+
+    .result-title h3 {
+        padding: 20px;
+        font-size: 20px;
+    }
 
     /* Footer */
 
