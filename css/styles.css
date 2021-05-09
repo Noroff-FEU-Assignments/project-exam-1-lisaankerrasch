@@ -1307,6 +1307,7 @@ footer p {
 
     .blog-container {
         width: 80%;
+        margin-bottom: 40px;
     }
 
     .blogpostpage {
@@ -1375,6 +1376,10 @@ footer p {
 
     .comments h5 {
         font-size: 22px;
+    }
+
+    .comment-container h4 {
+        font-size: 30px;
     }
 
     /* Recipes */
