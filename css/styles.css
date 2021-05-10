@@ -87,6 +87,10 @@ a:hover {
     font-weight: bold;
 }
 
+.mobile {
+    display: none;
+}
+
 
 /* Navigation */
 
@@ -142,6 +146,7 @@ li {
     position: absolute;
     top: 170px;
     left: 255px;
+    z-index: 2;
 }
 
 
@@ -211,7 +216,7 @@ input::placeholder {
 
 .index-container {
     width: 55%;
-    margin: 100px auto;
+    margin: 50px auto 100px;
 }
 
 .contact-container,
@@ -219,32 +224,101 @@ input::placeholder {
 .blog-container,
 .more-container,
 .recipe-container,
-.result-container {
+.result-container,
+.newsletter-container {
     width: 55%;
     margin: 50px auto 100px;
 
 }
 
+/* Slider */
+.carousel-container {
+    width: 80%;
+    margin: 50px auto 0;
+}
 
 .carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 100px;
+
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    padding: 50px auto;
 }
+
+.slider-desktop {
+    display: flex;
+    height: 100%;
+    width: 400%;
+    transition: all 0.4s;
+}
+
+.slider-desktop section {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.controls .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.controls ul {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.controls ul li {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #FF8676;
+    border-radius: 50px;
+    margin: 10px;
+    background: #FF8676;
+    cursor: pointer;
+}
+
+.controls ul li.selected {
+    background: transparent;
+}
+
 
 .carousel a {
     background-color: white;
 }
 
+.carousel-item {
+    max-width: 350px;
+    padding: 20px;
+}
+
 .carousel-img {
-    max-width: 90%;
+    max-width: 100%;
     height: 400px;
     object-fit: cover;
 }
 
 .carousel-title {
-    max-width: 90%;
+    max-width: 100%;
     min-height: 100px;
     background-color: white;
 }
@@ -411,7 +485,8 @@ input::placeholder {
 
 
 
-.contact-flex {
+.contact-flex,
+.newsletter-flex {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -902,7 +977,13 @@ footer p {
 
 @media screen and (max-device-width: 1200px) {
 
+
+
     /* Hidden for mobile */
+
+    .slider-desktop {
+        display: none;
+    }
 
     .to-top {
         display: none;
@@ -977,6 +1058,7 @@ footer p {
         height: 100%;
         background-color: #FDF3EC;
         text-align: center;
+        z-index: 2;
     }
 
     .mobile-menu ul {
@@ -1031,19 +1113,75 @@ footer p {
         margin-bottom: 10px;
     }
 
-    .contact-container {
+    .contact-container,
+    .newsletter-container {
         width: 80%;
-        margin-bottom: 10px;
+        margin-bottom: 10px auto;
+    }
+
+    /* Slider */
+
+    .carousel-container {
+        width: 90%;
+        margin: 50px auto;
     }
 
     .carousel {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 50px;
+        height: 600px;
     }
 
+    .slider-mobile {
+        display: flex;
+        height: 100%;
+        width: 400%;
+        transition: all 0.4s;
+
+    }
+
+    .slider-mobile section {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .controls .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .arrow.left {
+        height: 70px;
+        left: 0px;
+    }
+
+    .arrow.right {
+        height: 70px;
+        right: 0px;
+    }
+
+    .controls ul {
+        bottom: 0px;
+    }
+
+    .controls ul li {
+        width: 15px;
+        height: 15px;
+        border: 2px solid #FF8676;
+        border-radius: 50px;
+        margin: 10px;
+        background: #FF8676;
+        cursor: pointer;
+    }
+
+
+
     .carousel-item {
-        padding-bottom: 20px;
+        width: 250px;
+        padding: 30px;
     }
 
     .carousel-img {
