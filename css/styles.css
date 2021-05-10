@@ -294,12 +294,12 @@ input::placeholder {
     border: 2px solid #FF8676;
     border-radius: 50px;
     margin: 10px;
-    background: #FF8676;
+    background: transparent;
     cursor: pointer;
 }
 
 .controls ul li.selected {
-    background: transparent;
+    background: #FF8676;
 }
 
 
@@ -750,13 +750,11 @@ input::placeholder {
 }
 
 .comment-container {
+    background: white;
     width: 55%;
     margin: 0 auto;
 }
 
-.comment-container p {
-    padding: 60px;
-}
 
 .commentheading {
     margin: 0 auto;
@@ -765,10 +763,8 @@ input::placeholder {
 }
 
 .comments {
-    background-color: white;
+    padding: 60px;
 }
-
-
 
 ul {
     display: block;
@@ -898,9 +894,6 @@ figure {
     margin-bottom: 50px;
 }
 
-.result-item a {
-    background-color: white;
-}
 
 .result-img {
     width: 200px;
@@ -1503,11 +1496,11 @@ footer p {
 
     .comments h5 {
         font-size: 22px;
-        padding: 15px;
+        margin-top: 20px;
     }
 
-    .comment-container p {
-        padding: 0 15px 15px;
+    .comments {
+        padding: 20px;
     }
 
     .commentheading {
@@ -1574,6 +1567,10 @@ footer p {
     .result-title h3 {
         padding: 20px;
         font-size: 20px;
+    }
+
+    .result-item a {
+        background-color: white;
     }
 
     /* Footer */
