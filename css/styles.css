@@ -929,8 +929,6 @@ figure {
 }
 
 
-
-
 /* Footer */
 
 footer {
@@ -1122,12 +1120,12 @@ footer p {
     /* Slider */
 
     .carousel-container {
-        width: 90%;
-        margin: 50px auto;
+        width: 95%;
+        margin: 20px auto;
     }
 
     .carousel {
-        height: 600px;
+        height: 650px;
     }
 
     .slider-mobile {
@@ -1146,13 +1144,6 @@ footer p {
     }
 
 
-    .controls .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-
     .arrow.left {
         height: 70px;
         left: 0px;
@@ -1166,18 +1157,6 @@ footer p {
     .controls ul {
         bottom: 0px;
     }
-
-    .controls ul li {
-        width: 15px;
-        height: 15px;
-        border: 2px solid #FF8676;
-        border-radius: 50px;
-        margin: 10px;
-        background: #FF8676;
-        cursor: pointer;
-    }
-
-
 
     .carousel-item {
         width: 250px;
@@ -1197,8 +1176,9 @@ footer p {
     }
 
     .carousel-title h3 {
-        padding: 10px 0;
         text-align: center;
+        transform: translateY(40%);
+
 
     }
 
