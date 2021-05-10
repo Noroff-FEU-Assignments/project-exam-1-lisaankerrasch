@@ -225,7 +225,8 @@ input::placeholder {
 .more-container,
 .recipe-container,
 .result-container,
-.newsletter-container {
+.newsletter-container,
+.comment-container {
     width: 55%;
     margin: 50px auto 100px;
 
@@ -753,15 +754,21 @@ input::placeholder {
     margin: 0 auto;
 }
 
-.comment-container h4 {
+.comment-container p {
+    padding: 60px;
+}
+
+.commentheading {
+    margin: 0 auto;
     text-align: center;
     margin-bottom: 40px;
 }
 
 .comments {
     background-color: white;
-    padding: 60px;
 }
+
+
 
 ul {
     display: block;
@@ -889,6 +896,10 @@ figure {
 .result-item {
     display: flex;
     margin-bottom: 50px;
+}
+
+.result-item a {
+    background-color: white;
 }
 
 .result-img {
@@ -1488,16 +1499,20 @@ footer p {
         margin-bottom: 50px;
     }
 
-    .comments {
-        padding: 20px;
-    }
+
 
     .comments h5 {
         font-size: 22px;
+        padding: 15px;
     }
 
-    .comment-container h4 {
+    .comment-container p {
+        padding: 0 15px 15px;
+    }
+
+    .commentheading {
         font-size: 30px;
+        text-align: center
     }
 
     /* Recipes */

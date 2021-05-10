@@ -27,15 +27,14 @@ async function getResults() {
     for (let i = 0; i < results.length; i++) {
       resultContainer.innerHTML += `
         <div class="result-item">
-            
+          <a href="blogpost.html?id=${results[i].id}">
                 <img class="result-img" src="${results[i]._embedded["wp:featuredmedia"]["0"].source_url}"
                 alt="${results[i].title.rendered}">
                 <a href="blogpost.html?id=${results[i].id}">
                 <div class="result-title">
                 <h3>${results[i].title.rendered}</h3>
                 </div>
-               
-             </a>
+          </a>
         </div>
          `;
     }

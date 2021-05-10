@@ -48,13 +48,13 @@ async function createComment(details) {
 
     console.log(comments);
 
-    commentContainer.innerHTML += `<div class="comments">
+    commentContainer.innerHTML = `<div class="comments">
   
       <h5>${comments.author_name}</h5>
 
       <p>Published: ${comments.date}</p>
   
-     <p> ${comments.content.rendered}<br><br> </p>
+     <p> ${comments.content.rendered}</p>
   </div>`;
   } catch (error) {
     console.log(error);
