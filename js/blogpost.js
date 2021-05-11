@@ -12,7 +12,6 @@ const id = params.get("id");
 console.log(id);
 
 const url = "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts/" + id;
-
 async function createHTML(details) {
   try {
     const response = await fetch(url);
@@ -28,7 +27,12 @@ async function createHTML(details) {
     <p>Published: ${blog.date}</p>
 
    <p> ${blog.content.rendered}<br><br> </p>
-</div>`;
+</div>
+
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+  </div>`;
 
     title.innerHTML = `Peckish: ${blog.title.rendered}`;
   } catch (error) {
@@ -62,3 +66,14 @@ async function createComment(details) {
 }
 
 createComment();
+
+let modal = document.getElementsByClassName("modal");
+let img = document.getElementsByClassName("wp-block-image");
+let modalImg = document.getElementById("img01");
+
+img.onclick = function () {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+};
+
+console.log(modal);
