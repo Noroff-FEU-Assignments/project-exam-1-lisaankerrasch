@@ -719,7 +719,7 @@ input::placeholder {
 .modal-content {
     margin: auto;
     display: block;
-    width: 90%;
+    width: 900px;
     max-width: 900px;
 }
 
