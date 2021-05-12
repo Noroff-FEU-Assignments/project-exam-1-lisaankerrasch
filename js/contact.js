@@ -22,16 +22,16 @@ function checkLength(value, len) {
 }
 
 function checkSign(event) {
-  if (validateEmail(email.value)) {
+  if (checkLength(fullName.value, 5)) {
     checkSymbol1.style.display = "inline";
   }
-  if (checkLength(fullName.value, 0)) {
+  if (validateEmail(email.value)) {
     checkSymbol2.style.display = "inline";
   }
-  if (checkLength(subject.value, 9)) {
+  if (checkLength(subject.value, 15)) {
     checkSymbol3.style.display = "inline";
   }
-  if (checkLength(message.value, 24)) {
+  if (checkLength(message.value, 25)) {
     checkSymbol4.style.display = "inline";
   }
 }
@@ -45,12 +45,12 @@ function validateEmail(email) {
 function validateForm(event) {
   event.preventDefault();
 
-  if (checkLength(fullName.value, 0)) {
+  if (checkLength(fullName.value, 5)) {
     fullNameError.style.display = "none";
   } else {
     fullNameError.style.display = "block";
   }
-  if (checkLength(subject.value, 9)) {
+  if (checkLength(subject.value, 15)) {
     subjectError.style.display = "none";
   } else {
     subjectError.style.display = "block";
@@ -60,7 +60,7 @@ function validateForm(event) {
   } else {
     emailError.style.display = "block";
   }
-  if (checkLength(message.value, 24)) {
+  if (checkLength(message.value, 25)) {
     messageError.style.display = "none";
   } else {
     messageError.style.display = "block";
@@ -69,9 +69,9 @@ function validateForm(event) {
 
 function submitForm(event) {
   if (
-    checkLength(fullName.value, 0) &&
-    checkLength(subject.value, 9) &&
-    checkLength(message.value, 24) &&
+    checkLength(fullName.value, 5) &&
+    checkLength(subject.value, 15) &&
+    checkLength(message.value, 25) &&
     validateEmail(email.value)
   ) {
     event.preventDefault;

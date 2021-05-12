@@ -1,17 +1,17 @@
 const blogContainer = document.querySelector(".blog-container");
 const commentContainer = document.querySelector(".comment-container");
-
 const title = document.querySelector("title");
+const detailsFlex = document.querySelector(".recipe.details.flex");
 
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
 const id = params.get("id");
 
 console.log(id);
 
-const url = "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts/" + id;
+const url =
+  "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts/" + id + "?_embed";
+// const url = "https://peckish.lisa-noroff.no/wp-json/acf/v3/posts/" + id;
 async function createHTML(details) {
   try {
     const response = await fetch(url);
@@ -29,10 +29,18 @@ async function createHTML(details) {
    <p> ${blog.content.rendered}<br><br> </p>
 </div>
 
-  <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-  </div>`;
+
+  // `;
+    //   const modal = document.querySelector(".modal");
+    //   const image = document.querySelector(".wp-block-image");
+    //   const modalImg = document.querySelector("#img01");
+
+    //   image.onclick = function () {
+    //     modal.style.display = "block";
+    //     modalImg.src = blog.acf[0];
+    //   };
+
+    //   console.log(blog.acf);
 
     title.innerHTML = `Peckish: ${blog.title.rendered}`;
   } catch (error) {
@@ -67,13 +75,19 @@ async function createComment(details) {
 
 createComment();
 
-let modal = document.getElementsByClassName("modal");
-let img = document.getElementsByClassName("wp-block-image");
-let modalImg = document.getElementById("img01");
+// const imageUrl = "https://peckish.lisa-noroff.no/wp-json/acf/v3/posts/" + id;
+const modal = document.querySelector(".modal");
+const image = document.querySelector(".wp-block-image");
+const modalImg = document.querySelector("#img01");
 
-img.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-};
+// async function getModal() {
+//   try {
+//     const response = await fetch(imageUrl);
+//     const modalImage = await response.json();
 
-console.log(modal);
+//     console.log(modalImage);
+
+// modal.style.display = "block";
+modalImg.src = this.src;
+
+image.onclick = getModal();
