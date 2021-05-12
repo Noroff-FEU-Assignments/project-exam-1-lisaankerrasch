@@ -1284,6 +1284,7 @@ footer p {
     }
 
     .carousel-title h3 {
+        font-size: 22px;
         text-align: center;
         transform: translateY(40%);
 
@@ -1701,6 +1702,11 @@ footer p {
     .newsletter-page-content p {
         padding-bottom: 20px;
     }
+
+    .modal-content {
+        max-width: 80%;
+    }
+
 
     /* Footer */
 
