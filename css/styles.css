@@ -6,7 +6,7 @@
 body {
     margin: 0;
 
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     background-color: #F1DDCF;
 }
 
@@ -43,6 +43,11 @@ h5 {
 a {
     text-decoration: none;
     color: black;
+}
+
+p {
+    font-family: "Roboto condensed", sans-serif;
+    font-weight: 200;
 }
 
 a:hover {
