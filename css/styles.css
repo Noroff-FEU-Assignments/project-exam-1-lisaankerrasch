@@ -1783,19 +1783,18 @@ footer p {
 
     .result-content {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
     }
 
     .result-img {
         width: 150px;
-        height: 150px;
+        height: 200px;
         object-fit: cover;
     }
 
     .result-title {
         background-color: white;
         width: 100px;
-        height: 150px;
+        height: 200px;
     }
 }
