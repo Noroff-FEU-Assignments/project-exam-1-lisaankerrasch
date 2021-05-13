@@ -1778,7 +1778,7 @@ footer p {
 
     .result-item {
         max-width: 150px;
-        padding: 20px;
+        margin: 20px;
     }
 
     .result-content {
