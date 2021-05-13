@@ -40,6 +40,30 @@ const categoryUrl =
   "https://peckish.lisa-noroff.no/wp-json/wp/v2/categories?per_page=30";
 const recipeContainer = document.querySelector(".recipes");
 const cuisineContainer = document.querySelector(".cuisine");
+const mealContainer = document.querySelector(".meals");
+
+async function getMealtypes() {
+  try {
+    const response = await fetch(categoryUrl);
+    const meals = await response.json();
+
+    console.log(meals);
+
+    mealContainer.innerHTML += `<div class="meal-flex">
+      <a href="result.html?id=${meals[3].id}" class="meal-item-1">${meals[3].name}</a>
+      <a href="result.html?id=${meals[16].id}" class="meal-item-2">${meals[16].name}</a>
+      <a href="result.html?id=${meals[7].id}" class="meal-item-3">${meals[7].name}</a>
+    <a href="result.html?id=${meals[6].id}" class="meal-item-4">${meals[6].name}</a>
+    <a href="result.html?id=${meals[8].id}" class="meal-item-5">${meals[8].name}</a>
+    </div>
+      
+         `;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getMealtypes();
 
 async function getCategories() {
   try {
