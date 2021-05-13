@@ -432,7 +432,6 @@ input::placeholder {
 .blog-block a {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 22px;
-    color: #FF8676;
 }
 
 .blog-deco-line-yellow {
@@ -648,7 +647,6 @@ input::placeholder {
 .blogpost-block a {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 22px;
-    color: #FF8676;
 }
 
 /* Blog specific page */
@@ -944,7 +942,7 @@ figure {
 .cuisine-item-1,
 .cuisine-item-6,
 .cuisine-item-8 {
-    width: 25%;
+    width: 20%;
     background-color: #FFF476;
 }
 
@@ -1434,7 +1432,6 @@ footer p {
     .blog-block a {
         font-family: "Roboto Condensed", sans-serif;
         font-size: 12px;
-        color: #FF8676;
     }
 
     .blog-deco-line-yellow {
@@ -1583,7 +1580,6 @@ footer p {
         font-family: "Roboto Condensed", sans-serif;
         font-size: 12px;
         background-color: white;
-        color: #FF8676;
     }
 
     /* Blogpost page */
