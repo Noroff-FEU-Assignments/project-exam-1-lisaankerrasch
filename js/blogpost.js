@@ -1,7 +1,7 @@
 const blogContainer = document.querySelector(".blog-container");
 const commentContainer = document.querySelector(".comment-container");
-const title = document.querySelector("title");
-const detailsFlex = document.querySelector(".recipe.details.flex");
+const image1 = document.querySelector(".img01");
+const image2 = document.querySelector(".img02");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -9,43 +9,105 @@ const id = params.get("id");
 
 console.log(id);
 
-const url =
-  "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts/" + id + "?_embed";
-// const url = "https://peckish.lisa-noroff.no/wp-json/acf/v3/posts/" + id;
-async function createHTML(details) {
+const url = "https://peckish.lisa-noroff.no/wp-json/wp/v2/posts/" + id;
+
+const title = document.querySelector("title");
+
+async function getPost() {
   try {
     const response = await fetch(url);
     const blogPost = await response.json();
 
-    const blog = blogPost;
+    createHTML(blogPost);
 
-    console.log(blogPost);
+    const modal = document.querySelector(".modal");
+    const modalContent = document.querySelector(".modal-content");
 
-    blogContainer.innerHTML += `<div class="blogpostpage">
+    var img1 = document.querySelector("#myImg1");
+    const modalImg1 = document.querySelector("#img01");
 
-    <h1 class="uppercase">${blog.title.rendered}</h1>
-    <p>Published: ${blog.date}</p>
+    var img2 = document.querySelector("#myImg2");
+    const modalImg2 = document.querySelector("#img02");
 
-   <p> ${blog.content.rendered}<br><br> </p>
-</div>
+    var closeButton = document.querySelector(".close");
 
+    img1.onclick = function () {
+      modal.style.display = "block";
+      modalContent.src = this.src;
+    };
 
-  // `;
-    //   const modal = document.querySelector(".modal");
-    //   const image = document.querySelector(".wp-block-image");
-    //   const modalImg = document.querySelector("#img01");
+    img2.onclick = function () {
+      modal.style.display = "block";
+      modalContent.src = this.src;
+    };
 
-    //   image.onclick = function () {
-    //     modal.style.display = "block";
-    //     modalImg.src = blog.acf[0];
-    //   };
+    closeButton.onclick = function () {
+      modal.style.display = "none";
+    };
 
-    //   console.log(blog.acf);
-
-    title.innerHTML = `Peckish: ${blog.title.rendered}`;
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
   } catch (error) {
     console.log(error);
   }
+}
+
+getPost();
+
+function createHTML(blogPost) {
+  const customFields = blogPost.acf;
+  console.log(blogPost.acf);
+
+  blogContainer.innerHTML += `
+  <div class="blogpostpage">
+
+        <h1 class="uppercase">${customFields.title}</h1>
+        <p>Published: ${customFields.date}</p>
+        <div class="recipe-details-flex">
+            <div class="portions">
+                <p> Portions: ${customFields.portions} </p>
+            </div>
+            <div class="time"><p> Time: ${customFields.time} </p>
+            </div>
+        </div>
+
+        <img class="img01" id="myImg1" src="${customFields.img01}" alt="${customFields.title}">
+        <p class="allergens">Allergens: ${customFields.allergens}</p>
+        <div class="ingredient-flex">
+            <div class="ingredient-item-1">
+                <h2>${customFields.ingredientheader}</h2>
+                    <ul>
+                        <li>${customFields.ingredient1}</li>
+                        <li>${customFields.ingredient2}</li>
+                        <li>${customFields.ingredient3}</li>
+                        <li>${customFields.ingredient4}</li>
+                        <li>${customFields.ingredient5}</li>
+                    </ul>
+                </div>
+            <div class="ingredient-item-2">
+                <h2>${customFields.needheader}</h2>
+                    <ul>
+                        <li>${customFields.youneed1}</li>
+                        <li>${customFields.youneed2}</li>
+                        <li>${customFields.youneed3}</li>
+                        <li>${customFields.youneed4}</li>
+                        <li>${customFields.youneed5}</li>
+                    </ul>
+            </div>
+        </div>
+        <h2>${customFields.directions1header}</h2>
+        <p>${customFields.directions1}</p>
+        <button class="timer">Count down</button>
+        <p class="tip">${customFields.tip}</p>
+        <img class="img02" id="myImg2" src="${customFields.img02}" alt="${customFields.title}">
+        <p>${customFields.directions2}</p>
+    </div>
+    `;
+
+  title.innerHTML = `Peckish: ${customFields.title}`;
 }
 
 createHTML();
@@ -74,20 +136,3 @@ async function createComment(details) {
 }
 
 createComment();
-
-// const imageUrl = "https://peckish.lisa-noroff.no/wp-json/acf/v3/posts/" + id;
-const modal = document.querySelector(".modal");
-const image = document.querySelector(".wp-block-image");
-const modalImg = document.querySelector("#img01");
-
-// async function getModal() {
-//   try {
-//     const response = await fetch(imageUrl);
-//     const modalImage = await response.json();
-
-//     console.log(modalImage);
-
-// modal.style.display = "block";
-modalImg.src = this.src;
-
-image.onclick = getModal();
