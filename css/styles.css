@@ -1777,7 +1777,7 @@ footer p {
     }
 
     .result-item {
-        max-width: 250px;
+        max-width: 300px;
         margin: 20px;
     }
 
@@ -1794,7 +1794,7 @@ footer p {
 
     .result-title {
         background-color: white;
-        width: 100px;
+        width: 150px;
         height: 200px;
     }
 }
