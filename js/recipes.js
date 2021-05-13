@@ -50,11 +50,11 @@ async function getMealtypes() {
     console.log(meals);
 
     mealContainer.innerHTML += `<div class="meal-flex">
-      <a href="result.html?id=${meals[3].id}" class="meal-item-1">${meals[3].name}</a>
-      <a href="result.html?id=${meals[16].id}" class="meal-item-2">${meals[16].name}</a>
-      <a href="result.html?id=${meals[7].id}" class="meal-item-3">${meals[7].name}</a>
-    <a href="result.html?id=${meals[6].id}" class="meal-item-4">${meals[6].name}</a>
-    <a href="result.html?id=${meals[8].id}" class="meal-item-5">${meals[8].name}</a>
+      <a href="result.html?id=${meals[3].id}" class="meal-item one">${meals[3].name}</a>
+      <a href="result.html?id=${meals[16].id}" class="meal-item two">${meals[16].name}</a>
+      <a href="result.html?id=${meals[7].id}" class="meal-item three">${meals[7].name}</a>
+    <a href="result.html?id=${meals[6].id}" class="meal-item four">${meals[6].name}</a>
+    <a href="result.html?id=${meals[8].id}" class="meal-item five">${meals[8].name}</a>
     </div>
       
          `;
@@ -73,19 +73,19 @@ async function getCategories() {
     console.log(categories);
 
     recipeContainer.innerHTML += `<div class="recipe-flex">
-      <a href="result.html?id=${categories[15].id}" class="recipe-item-1">${categories[15].name}</a>
-      <a href="result.html?id=${categories[2].id}" class="recipe-item-2">${categories[2].name}</a>
-      <a href="result.html?id=${categories[10].id}" class="recipe-item-3">${categories[10].name}</a>
+      <a href="result.html?id=${categories[15].id}" class="recipe-item one">${categories[15].name}</a>
+      <a href="result.html?id=${categories[2].id}" class="recipe-item two">${categories[2].name}</a>
+      <a href="result.html?id=${categories[10].id}" class="recipe-item three">${categories[10].name}</a>
    
     
-    <a href="result.html?id=${categories[4].id}" class="recipe-item-4">${categories[4].name}</a>
-    <a href="result.html?id=${categories[19].id}" class="recipe-item-5">${categories[19].name}</a>
-    <a href="result.html?id=${categories[29].id}" class="recipe-item-6">${categories[29].name}</a>
+    <a href="result.html?id=${categories[4].id}" class="recipe-item four">${categories[4].name}</a>
+    <a href="result.html?id=${categories[19].id}" class="recipe-item five">${categories[19].name}</a>
+    <a href="result.html?id=${categories[29].id}" class="recipe-item six">${categories[29].name}</a>
     
     
-    <a href="result.html?id=${categories[21].id}" class="recipe-item-7">${categories[21].name}</a>
-    <a href="result.html?id=${categories[23].id}" class="recipe-item-8">${categories[23].name}</a>
-    <a href="result.html?id=${categories[11].id}" class="recipe-item-9">${categories[11].name}</a>
+    <a href="result.html?id=${categories[21].id}" class="recipe-item seven">${categories[21].name}</a>
+    <a href="result.html?id=${categories[23].id}" class="recipe-item eight">${categories[23].name}</a>
+    <a href="result.html?id=${categories[11].id}" class="recipe-item nine">${categories[11].name}</a>
     </div>
       
          `;
@@ -102,19 +102,19 @@ async function getCuisines() {
     const cuisine = await response.json();
 
     cuisineContainer.innerHTML += `<div class="recipe-flex">
-        <a href="result.html?id=${cuisine[1].id}" class="cuisine-item-1">${cuisine[1].name}</a>
-        <a href="result.html?id=${cuisine[12].id}" class="cuisine-item-2">${cuisine[12].name}</a>
-        <a href="result.html?id=${cuisine[14].id}" class="cuisine-item-3">${cuisine[14].name}</a>
+        <a href="result.html?id=${cuisine[1].id}" class="cuisine-item one">${cuisine[1].name}</a>
+        <a href="result.html?id=${cuisine[12].id}" class="cuisine-item two">${cuisine[12].name}</a>
+        <a href="result.html?id=${cuisine[14].id}" class="cuisine-item three">${cuisine[14].name}</a>
      
       
-      <a href="result.html?id=${cuisine[18].id}" class="cuisine-item-4">${cuisine[18].name}</a>
-      <a href="result.html?id=${cuisine[22].id}" class="cuisine-item-5">${cuisine[22].name}</a>
-      <a href="result.html?id=${cuisine[24].id}" class="cuisine-item-6">${cuisine[24].name}</a>
+      <a href="result.html?id=${cuisine[18].id}" class="cuisine-item four">${cuisine[18].name}</a>
+      <a href="result.html?id=${cuisine[22].id}" class="cuisine-item five">${cuisine[22].name}</a>
+      <a href="result.html?id=${cuisine[24].id}" class="cuisine-item six">${cuisine[24].name}</a>
       
       
-      <a href="result.html?id=${cuisine[25].id}" class="cuisine-item-7">${cuisine[25].name}</a>
-      <a href="result.html?id=${cuisine[27].id}" class="cuisine-item-8">${cuisine[27].name}</a>
-      <a href="result.html?id=${cuisine[0].id}" class="cuisine-item-9">${cuisine[0].name}</a>
+      <a href="result.html?id=${cuisine[25].id}" class="cuisine-item seven">${cuisine[25].name}</a>
+      <a href="result.html?id=${cuisine[27].id}" class="cuisine-item eight">${cuisine[27].name}</a>
+      <a href="result.html?id=${cuisine[0].id}" class="cuisine-item nine">${cuisine[0].name}</a>
       </div>
         
            `;
