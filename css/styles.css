@@ -1,15 +1,11 @@
 /* Global */
 
 
-
-
 body {
     margin: 0;
-
     font-family: "Roboto Condensed", sans-serif;
     background-color: #F1DDCF;
 }
-
 
 h2 {
     font-family: "Fira sans", sans-serif;
@@ -30,7 +26,6 @@ h4 {
     font-size: 38px;
     font-weight: lighter;
     margin: 10px 0;
-
 }
 
 h5 {
@@ -77,7 +72,6 @@ a:hover {
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 2px 2px 10px #ddbab5;
-
 }
 
 .screenreader {
@@ -97,7 +91,6 @@ a:hover {
     display: none;
 }
 
-
 /* Navigation */
 
 header {
@@ -110,11 +103,9 @@ header {
     width: 205px;
 }
 
-
 .nav-flex {
     width: 100%;
 }
-
 
 .nav-item-1 {
     display: inline-block;
@@ -155,7 +146,6 @@ li {
     z-index: 2;
 }
 
-
 .dropdown-menu {
     width: 250px;
     display: flex;
@@ -175,12 +165,10 @@ li {
     width: 65px;
 }
 
-
 .search-field {
     position: absolute;
     top: 130px;
     right: 85px;
-
     width: 300px;
     height: 65px;
     background-color: #FF8676;
@@ -219,7 +207,6 @@ input::placeholder {
 }
 
 /* Index */
-
 
 .index-container,
 .contact-container,
@@ -338,7 +325,6 @@ input::placeholder {
     align-items: center;
     margin: 0 auto 100px;
     text-align: center;
-
 }
 
 .recipe-header {
@@ -356,7 +342,6 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-
 }
 
 .popular-img,
@@ -475,7 +460,6 @@ input::placeholder {
     background-color: white;
 }
 
-
 .contact-flex,
 .newsletter-flex {
     display: flex;
@@ -553,7 +537,6 @@ input::placeholder {
     width: 300px;
     padding-bottom: 50px;
 }
-
 
 .contact-images img {
     width: 100%;
@@ -690,8 +673,7 @@ input::placeholder {
     cursor: pointer;
 }
 
-.modal,
-.modal2 {
+.modal {
     display: none;
     position: fixed;
     z-index: 2;
@@ -770,13 +752,11 @@ input::placeholder {
     font-size: 18px;
     font-weight: bold;
     padding: 10px;
-
 }
 
 .portions {
     background-color: #FF8676;
     width: 120px;
-
 }
 
 .time {
@@ -809,7 +789,6 @@ input::placeholder {
     width: 55%;
     margin: 0 auto;
 }
-
 
 .commentheading {
     margin: 0 auto;
@@ -888,13 +867,11 @@ figure {
     flex-wrap: wrap;
 }
 
-
 .recipe-item.one,
 .recipe-item.six {
     width: 25%;
     background-color: #FF8676;
 }
-
 
 .recipe-item.two,
 .recipe-item.nine {
@@ -914,7 +891,6 @@ figure {
     width: 25%;
 }
 
-
 .cuisine-item.one,
 .cuisine-item.six,
 .cuisine-item.eight {
@@ -928,8 +904,6 @@ figure {
     background-color: #FCF9DF;
     width: 30%;
 }
-
-
 
 .cuisine-item.three,
 .cuisine-item.five,
@@ -970,7 +944,6 @@ figure {
 .result-item p {
     padding: 0 20px;
 }
-
 
 .result-img {
     width: 200px;
@@ -1025,8 +998,6 @@ figure {
     object-fit: cover;
 }
 
-
-
 .loader {
     margin: 50px auto;
     border: 10px solid white;
@@ -1046,7 +1017,6 @@ figure {
         transform: rotate(360deg);
     }
 }
-
 
 /* Footer */
 
@@ -1070,13 +1040,11 @@ footer {
     padding-bottom: 30px;
 }
 
-
 footer p {
     font-family: "Fira sans", sans-serif;
     font-size: 18px;
     margin: 0;
     padding-bottom: 10px;
-
 }
 
 .some-icons {
@@ -1094,8 +1062,6 @@ footer p {
 
 @media screen and (max-device-width: 1200px) {
 
-
-
     /* Hidden for mobile */
 
     .slider-desktop {
@@ -1110,7 +1076,6 @@ footer p {
         display: none;
     }
 
-
     .deco-line-yellow {
         margin: 0px auto 50px;
         background-color: #FEFAC7;
@@ -1118,11 +1083,9 @@ footer p {
         width: 100%;
     }
 
-
     h2 {
         font-size: 22px;
     }
-
 
     /* Navigation */
 
@@ -1183,7 +1146,6 @@ footer p {
         padding-left: 0;
     }
 
-
     .mobile-menu li {
         font-family: "Fira sans", sans-serif;
         font-size: 2.5em;
@@ -1206,14 +1168,11 @@ footer p {
         width: 50%;
     }
 
-
-
     .search-field {
         top: 100px;
         font-size: 14px;
         max-width: 250px;
         height: 50px;
-
     }
 
     .go-button {
@@ -1252,7 +1211,6 @@ footer p {
         height: 100%;
         width: 400%;
         transition: all 0.4s;
-
     }
 
     .slider-mobile section {
@@ -1261,7 +1219,6 @@ footer p {
         justify-content: center;
         align-items: center;
     }
-
 
     .arrow.left {
         height: 70px;
@@ -1298,8 +1255,6 @@ footer p {
         font-size: 22px;
         text-align: center;
         transform: translateY(40%);
-
-
     }
 
     .popular-container,
@@ -1325,7 +1280,6 @@ footer p {
         max-width: 300px;
         height: 300px;
     }
-
 
     .popular-title,
     .drinks-title {
@@ -1354,14 +1308,11 @@ footer p {
         margin: 0 auto 20px;
     }
 
-
-
     .blog-block {
         position: relative;
         display: flex;
         margin: 50px auto;
     }
-
 
     .blog-block img {
         max-width: 120px;
@@ -1411,7 +1362,6 @@ footer p {
         margin-bottom: 50px;
     }
 
-
     .newsletter-container {
         width: 55%;
         margin: 0 auto;
@@ -1425,7 +1375,6 @@ footer p {
     .newsletter-container p {
         font-size: 22px;
     }
-
 
     .newsletter-img {
         display: none;
@@ -1469,7 +1418,6 @@ footer p {
         width: 80%;
         margin-bottom: 50px;
     }
-
 
     .about-flex {
         display: flex;
@@ -1518,7 +1466,6 @@ footer p {
         width: 100%;
         height: auto;
         min-width: 0;
-
     }
 
     .blogpost-block-text {
@@ -1570,7 +1517,6 @@ footer p {
         margin-top: 30px;
     }
 
-
     .portions,
     .time,
     .timer,
@@ -1610,8 +1556,6 @@ footer p {
         margin-bottom: 50px;
     }
 
-
-
     .comments h5 {
         font-size: 22px;
         margin-top: 20px;
@@ -1630,8 +1574,6 @@ footer p {
         display: none;
     }
 
-
-
     /* Recipes */
 
     .recipe-flex {
@@ -1639,29 +1581,9 @@ footer p {
         flex-direction: column;
     }
 
-    .recipe-item-1,
-    .recipe-item-2,
-    .recipe-item-3,
-    .recipe-item-4,
-    .recipe-item-5,
-    .recipe-item-6,
-    .recipe-item-7,
-    .recipe-item-8,
-    .recipe-item-9,
-    .cuisine-item-1,
-    .cuisine-item-2,
-    .cuisine-item-3,
-    .cuisine-item-4,
-    .cuisine-item-5,
-    .cuisine-item-6,
-    .cuisine-item-7,
-    .cuisine-item-8,
-    .cuisine-item-9,
-    .meal-item-1,
-    .meal-item-2,
-    .meal-item-3,
-    .meal-item-4,
-    .meal-item-5 {
+    .recipe-item,
+    .meal-item,
+    .cuisine-item {
         width: 100%;
         margin: 15px auto;
     }
@@ -1733,7 +1655,6 @@ footer p {
         max-width: 80%;
     }
 
-
     /* Footer */
 
     footer {
@@ -1748,12 +1669,10 @@ footer p {
         justify-content: space-between;
     }
 
-
     footer p {
         font-size: 14px;
         margin: 0;
         padding-bottom: 5px;
-
     }
 
     .footer-item-1,
