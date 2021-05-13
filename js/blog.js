@@ -57,11 +57,12 @@ loadButton.onclick = async function getMore() {
 
     for (let i = 0; i < moreList.length; i++) {
       blogPost.innerHTML += `
+      <a href="blogpost.html?id=${moreList[i].id}">
             <div class="blogpost-block">
                 <div class="blogpost-block-1">
                     <img src="${moreList[i]._embedded["wp:featuredmedia"]["0"].source_url}"
                     alt="${moreList[i].title.rendered}">
-                    </div>
+                    </div></a>
                 <div class="blogpost-block-2">
                     <div class="blogpost-block-text">
                     <a href="blogpost.html?id=${moreList[i].id}"><h4>${moreList[i].title.rendered}</h4></a>
