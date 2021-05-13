@@ -1776,6 +1776,10 @@ footer p {
         max-width: 250px;
     }
 
+    .result-item {
+        max-width: 200px;
+    }
+
     .result-content {
         display: flex;
         justify-content: space-between;
