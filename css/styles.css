@@ -961,6 +961,10 @@ figure {
     margin-bottom: 50px;
 }
 
+.result-item p {
+    padding: 0 20px;
+}
+
 
 .result-img {
     width: 200px;
@@ -1681,8 +1685,13 @@ footer p {
     }
 
     .result-title h3 {
-        padding: 20px;
+        padding: 5px 20px;
         font-size: 20px;
+    }
+
+    .result-title p {
+        padding: 5px 10px;
+        margin: 0;
     }
 
     .result-item a {

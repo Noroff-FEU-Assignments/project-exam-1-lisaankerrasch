@@ -20,6 +20,8 @@ async function getResults() {
     const response = await fetch(url);
     const results = await response.json();
 
+    const acfResults = results.acf;
+
     console.log(results);
 
     loader.classList.add("show-hide");
@@ -33,6 +35,10 @@ async function getResults() {
                 <a href="blogpost.html?id=${results[i].id}">
                 <div class="result-title">
                 <h3>${results[i].title.rendered}</h3>
+                <p>Time: ${results[i].acf.time}</p>
+                <p>Allergens: ${results[i].acf.allergens}</hp>
+
+
                 </div>
           </a>
         </div>

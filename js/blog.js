@@ -22,18 +22,20 @@ async function getBlogposts() {
       if (i === 10) {
         break;
       }
-      blogPost.innerHTML += `
-    <div class="blogpost-block">
+      blogPost.innerHTML += `      
+      <a href="blogpost.html?id=${blog[i].id}">
+      <div class="blogpost-block">
         <div class="blogpost-block-1">
             <img src="${blog[i]._embedded["wp:featuredmedia"]["0"].source_url}"
             alt="${blog[i].title.rendered}">
-            </div>
+        </div></a>
         <div class="blogpost-block-2">
             <div class="blogpost-block-text">
             <a href="blogpost.html?id=${blog[i].id}"><h4>${blog[i].title.rendered}</h4></a>
                 <p>${blog[i].excerpt.rendered}</p>
-                <a href="blogpost.html?id=${blog[i].id}">Read more...</a>
-            </div>
+                <a href="blogpost.html?id=${blog[i].id}"><p>Read more..</p></a>
+
+        </div>
     </div>
 `;
     }
