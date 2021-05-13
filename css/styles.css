@@ -553,6 +553,7 @@ input::placeholder {
 }
 
 .contact-send {
+    padding-top: 20px;
     width: 90%;
     height: 40px;
     border: none;
