@@ -1781,6 +1781,10 @@ footer p {
         margin: 20px;
     }
 
+    .result-item p {
+        padding: 5px 10px;
+    }
+
     .result-content {
         display: flex;
         justify-content: space-between;
