@@ -89,7 +89,7 @@ async function getCuisines() {
       
       
       <a href="result.html?id=${cuisine[25].id}" class="cuisine-item-7">${cuisine[25].name}</a>
-      <a href="result.html?id=${cuisine[23].id}" class="cuisine-item-8">${cuisine[23].name}</a>
+      <a href="result.html?id=${cuisine[27].id}" class="cuisine-item-8">${cuisine[27].name}</a>
       <a href="result.html?id=${cuisine[0].id}" class="cuisine-item-9">${cuisine[0].name}</a>
       </div>
         
