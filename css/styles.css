@@ -1777,12 +1777,19 @@ footer p {
     }
 
     .result-item {
-        max-width: 200px;
+        max-width: 150px;
+        padding: 20px;
     }
 
     .result-content {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    .result-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
     }
 }
