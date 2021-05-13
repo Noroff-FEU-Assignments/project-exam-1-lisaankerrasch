@@ -371,7 +371,7 @@ input::placeholder {
 .drinks-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
 }
 
@@ -859,10 +859,16 @@ figure {
 
 /* Recipes */
 
-.recipe-flex {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.recipe-item,
+.cuisine-item,
+.meal-item {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 30px;
+    margin: 15px;
 }
 
 .meal-flex {
@@ -895,17 +901,12 @@ figure {
     background-color: #fdfada;
 }
 
-.recipe-item,
-.cuisine-item,
-.meal-item {
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 15px 0;
-    border-radius: 30px;
-    margin: 15px;
+.recipe-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
 
 .recipe-item.one,
 .recipe-item.six {
@@ -913,12 +914,6 @@ figure {
     background-color: #FF8676;
 }
 
-.cuisine-item.one,
-.cuisine-item.six,
-.cuisine-item.eight {
-    width: 20%;
-    background-color: #FFF476;
-}
 
 .recipe-item.two,
 .recipe-item.nine {
@@ -933,6 +928,19 @@ figure {
     width: 30%;
 }
 
+.recipe-item.four,
+.recipe-item.eight {
+    width: 25%;
+}
+
+
+.cuisine-item.one,
+.cuisine-item.six,
+.cuisine-item.eight {
+    width: 20%;
+    background-color: #FFF476;
+}
+
 .cuisine-item.two,
 .cuisine-item.four,
 .cuisine-item.nine {
@@ -940,10 +948,7 @@ figure {
     width: 30%;
 }
 
-.recipe-item.four,
-.recipe-item.eight {
-    width: 25%;
-}
+
 
 .cuisine-item.three,
 .cuisine-item.five,
