@@ -1792,4 +1792,10 @@ footer p {
         height: 150px;
         object-fit: cover;
     }
+
+    .result-title {
+        background-color: white;
+        width: 100px;
+        height: 150px;
+    }
 }
