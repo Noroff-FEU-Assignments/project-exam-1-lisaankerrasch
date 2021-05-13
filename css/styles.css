@@ -602,6 +602,7 @@ input::placeholder {
 
 .about-flex img {
     max-width: 45%;
+    height: 400px;
     object-fit: cover;
 }
 
