@@ -1802,4 +1802,13 @@ footer p {
         width: 150px;
         height: 200px;
     }
+
+    .modal {
+        padding-top: 100px;
+    }
+
+    .modal-content {
+        width: 700px;
+        max-width: 800px;
+    }
 }
