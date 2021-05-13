@@ -22,7 +22,6 @@ h2 {
 h3 {
     font-family: "Fira sans", sans-serif;
     font-size: 28px;
-    font-weight: lighter;
     margin: 0;
 }
 
@@ -221,11 +220,8 @@ input::placeholder {
 
 /* Index */
 
-.index-container {
-    width: 55%;
-    margin: 50px auto 100px;
-}
 
+.index-container,
 .contact-container,
 .about-container,
 .blog-container,
@@ -267,8 +263,6 @@ input::placeholder {
     align-items: center;
 }
 
-
-
 .controls .arrow {
     position: absolute;
     top: 50%;
@@ -309,7 +303,6 @@ input::placeholder {
     background: #FF8676;
 }
 
-
 .carousel a {
     background-color: white;
 }
@@ -344,21 +337,12 @@ input::placeholder {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto 100px;
-
-}
-
-.recipe-header {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto 50px;
-}
-
-.popular-header h3,
-.drinks-header,
-.recipe-header {
     text-align: center;
+
+}
+
+.recipe-header {
+    margin: 0 auto 50px;
 }
 
 .deco-line-palepink {
@@ -374,7 +358,6 @@ input::placeholder {
     margin-bottom: 50px;
 
 }
-
 
 .popular-img,
 .drinks-img {
@@ -446,6 +429,7 @@ input::placeholder {
 .newsletter-full {
     width: 100%;
     background-color: #F5C0B7;
+    margin-bottom: 70px;
 }
 
 .newsletter-container {
@@ -540,10 +524,7 @@ input::placeholder {
     margin: 0px;
 }
 
-.checksymbol1,
-.checksymbol2,
-.checksymbol3,
-.checksymbol4 {
+.checksymbol {
     display: none;
     width: 20px;
 }

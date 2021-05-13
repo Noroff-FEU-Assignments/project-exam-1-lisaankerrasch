@@ -8,10 +8,10 @@ const emailError = document.querySelector("#emailError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
 const success = document.querySelector(".success");
-const checkSymbol1 = document.querySelector(".checksymbol1");
-const checkSymbol2 = document.querySelector(".checksymbol2");
-const checkSymbol3 = document.querySelector(".checksymbol3");
-const checkSymbol4 = document.querySelector(".checksymbol4");
+const checkSymbol1 = document.querySelector(".checksymbol.one");
+const checkSymbol2 = document.querySelector(".checksymbol.two");
+const checkSymbol3 = document.querySelector(".checksymbol.three");
+const checkSymbol4 = document.querySelector(".checksymbol.four");
 
 function checkLength(value, len) {
   if (value.trim().length > len) {
@@ -75,6 +75,10 @@ function submitForm(event) {
     validateEmail(email.value)
   ) {
     event.preventDefault;
+    checkSymbol1.style.display = "none";
+    checkSymbol2.style.display = "none";
+    checkSymbol3.style.display = "none";
+    checkSymbol4.style.display = "none";
     form.classList.add("hiddenjs");
     success.innerHTML = `<div class="message">Thank you for reaching out! We will be in touch with you shortly. </div>`;
     form.reset();
