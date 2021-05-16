@@ -59,7 +59,6 @@ getPost();
 
 function createHTML(blogPost) {
   const customFields = blogPost.acf;
-  console.log(blogPost.acf);
 
   blogContainer.innerHTML += `
   <div class="blogpostpage">

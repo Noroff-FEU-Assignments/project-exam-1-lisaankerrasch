@@ -95,21 +95,23 @@ goSearch.onclick = async function searchBlogposts() {
       .value.toLowerCase();
     hiddenForSearch.style.display = "none";
     console.log(searchPhrase);
+    resultContainer.innerHTML = "";
 
     for (let i = 0; i < resultList.length; i++) {
       if (
-        resultList[i].title.rendered.toLowerCase().includes(searchPhrase) ||
-        resultList[i].acf.category.toLowerCase().includes(searchPhrase)
+        resultList[i].acf.category.toLowerCase().includes(searchPhrase) ||
+        resultList[i].title.rendered.toLowerCase().includes(searchPhrase)
       ) {
         noResults.style.display = "none";
         resultLoader.classList.remove("loader");
         searchText.style.display = "block";
-        searchText.innerHTML = `Your search for "${searchPhrase}" returned these recipes:`;
         resultContainer.style.display = "flex";
         resultContainer.style.justifyContent = "space-between";
         resultContainer.style.flexWrap = "wrap";
 
-        resultContainer.innerHTML = `
+        searchText.innerHTML = `Your search for "${searchPhrase}" returned these recipes:`;
+
+        resultContainer.innerHTML += `
             <div class="result-item">
             <a href="blogpost.html?id=${resultList[i].id}">
                   <img class="result-img" src="${resultList[i]._embedded["wp:featuredmedia"]["0"].source_url}"
