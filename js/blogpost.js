@@ -18,6 +18,8 @@ async function getPost() {
     const response = await fetch(url);
     const blogPost = await response.json();
 
+    console.log(blogPost);
+
     createHTML(blogPost);
 
     const modal = document.querySelector(".modal");
@@ -109,12 +111,10 @@ function createHTML(blogPost) {
   title.innerHTML = `Peckish: ${customFields.title}`;
 }
 
-createHTML();
-
 const commentsUrl =
   "https://peckish.lisa-noroff.no/wp-json/wp/v2/comments/" + id;
 
-async function createComment(details) {
+async function createComment() {
   try {
     const response = await fetch(commentsUrl);
     const comments = await response.json();
@@ -128,10 +128,11 @@ async function createComment(details) {
       <p>Published: ${comments.date}</p>
   
      <p> ${comments.content.rendered}</p>
-  </div>`;
+  </div>
+  `;
   } catch (error) {
     console.log(error);
   }
 }
-
 createComment();
+createHTML();

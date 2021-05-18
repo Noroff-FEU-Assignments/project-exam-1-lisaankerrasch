@@ -838,6 +838,10 @@ input::placeholder {
     padding: 60px;
 }
 
+.comment-form {
+    padding: 60px;
+}
+
 ul {
     display: block;
     margin-block-start: 0em;
