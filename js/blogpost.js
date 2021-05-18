@@ -103,7 +103,7 @@ function createHTML(blogPost) {
         <p>${customFields.directions1}</p>
         <button class="timer">Count down</button>
         <p class="tip">${customFields.tip}</p>
-        <img class="img02" id="myImg2" src="${customFields.img02}" alt="${customFields.title}">
+        <img class="img02" id="myImg2" src="${customFields.img02}" alt="${customFields.title} prep">
         <p>${customFields.directions2}</p>
     </div>
     `;
