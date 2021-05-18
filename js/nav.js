@@ -72,6 +72,7 @@ const hiddenForSearch = document.querySelector(".hideforsearch");
 const searchText = document.querySelector(".search-result-text");
 const resultLoader = document.querySelector(".loader-container");
 const noSearchResults = document.querySelector(".error");
+const searchForm = document.querySelector(".search-form");
 
 goSearch.onclick = async function searchBlogposts() {
   try {
@@ -86,9 +87,8 @@ goSearch.onclick = async function searchBlogposts() {
       .value.toLowerCase();
     hiddenForSearch.style.display = "none";
     console.log(searchPhrase);
-    searchResultContainer.innerHTML = "";
-    searchPhrase.innerHTML = "";
     searchText.style.display = "block";
+    searchResultContainer.innerHTML = "";
     searchText.innerHTML = `Your search for "${searchPhrase}" did not return any results. <p>You can try a new search, or browse through categories on the Recipe page!</p>
     <div class="go-to-recipes"><a href="recipes.html">Go to Recipes</a></div>`;
 
@@ -105,8 +105,7 @@ goSearch.onclick = async function searchBlogposts() {
 
         searchText.innerHTML = `Your search for "${searchPhrase}" returned these recipes:`;
 
-        searchResultContainer.innerHTML += [
-          `
+        (searchResultContainer.innerHTML += `
               <div class="result-item">
               <a href="blogpost.html?id=${resultList[i].id}">
                     <img class="result-img" src="${resultList[i]._embedded["wp:featuredmedia"]["0"].source_url}"
@@ -119,9 +118,8 @@ goSearch.onclick = async function searchBlogposts() {
                     </div>
               </a>
               </div>
-      `,
-        ];
-        console.log(resultList[i]);
+      `),
+          console.log(resultList[i]);
       }
     }
   } catch (error) {
@@ -129,8 +127,7 @@ goSearch.onclick = async function searchBlogposts() {
   }
 };
 
-const element = document.querySelector(".search-form");
-element.addEventListener("submit", (event) => {
+searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   goSearch.click();
 });
