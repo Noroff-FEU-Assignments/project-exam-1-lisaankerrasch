@@ -1222,6 +1222,16 @@ footer p {
         height: 50px;
     }
 
+    .search-result-text {
+        width: 80%;
+    }
+
+    .search-result-text p {
+        font-size: 16px;
+        text-align: center;
+        margin: 50px auto 100px;
+    }
+
     /* Index */
 
     .index-container {
