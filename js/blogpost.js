@@ -123,7 +123,7 @@ async function createComment() {
 
     commentContainer.innerHTML = `<div class="comments">
   
-      <h5>${comments.author_name}</h5>
+      <h4>${comments.author_name}</h4>
 
       <p>Published: ${comments.date}</p>
   
