@@ -559,6 +559,7 @@ input::placeholder {
     font-family: "Roboto Condensed", sans-serif;
     font-weight: lighter;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .contact-images {

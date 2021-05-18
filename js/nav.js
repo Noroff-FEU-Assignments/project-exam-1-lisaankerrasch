@@ -80,7 +80,6 @@ goSearch.onclick = async function searchBlogposts() {
     const resultList = await response.json();
 
     console.log(resultList);
-
     searchBar.classList.add("show-hide");
     const searchPhrase = document
       .querySelector("#searchfield")
@@ -121,6 +120,7 @@ goSearch.onclick = async function searchBlogposts() {
       `),
           console.log(resultList[i]);
       }
+      searchForm.reset();
     }
   } catch (error) {
     console.log(error);
