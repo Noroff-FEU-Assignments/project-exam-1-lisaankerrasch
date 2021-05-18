@@ -1259,7 +1259,7 @@ footer p {
 
     .carousel-container {
         width: 95%;
-        margin: 20px auto;
+        margin: 50px auto 0;
     }
 
     .carousel {
@@ -1268,7 +1268,6 @@ footer p {
 
     .slider-mobile {
         display: flex;
-        height: 100%;
         width: 400%;
         transition: all 0.4s;
     }
@@ -1291,7 +1290,7 @@ footer p {
     }
 
     .controls ul {
-        bottom: 0px;
+        bottom: 30px;
     }
 
     .carousel-item {
