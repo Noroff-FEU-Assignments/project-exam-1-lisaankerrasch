@@ -180,12 +180,11 @@ input {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 20px;
     color: white;
-    text-align: center;
+    padding-left: 25px;
 }
 
 input::placeholder {
     color: white;
-    text-align: center;
 }
 
 .go-button {
@@ -1762,6 +1761,10 @@ footer p {
     .blogpost-block img {
         max-width: 100%;
         max-height: 500px;
+    }
+
+    .search-field {
+        right: 120px;
     }
 }
 

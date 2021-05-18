@@ -81,13 +81,13 @@ goSearch.onclick = async function searchBlogposts() {
     console.log(resultList);
 
     searchBar.classList.add("show-hide");
-    // resultLoader.classList.add("loader");
     const searchPhrase = document
       .querySelector("#searchfield")
       .value.toLowerCase();
     hiddenForSearch.style.display = "none";
     console.log(searchPhrase);
     searchResultContainer.innerHTML = "";
+    searchPhrase.innerHTML = "";
     searchText.style.display = "block";
     searchText.innerHTML = `Your search for "${searchPhrase}" did not return any results. <p>You can try a new search, or browse through categories on the Recipe page!</p>
     <div class="go-to-recipes"><a href="recipes.html">Go to Recipes</a></div>`;
