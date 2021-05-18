@@ -112,7 +112,7 @@ function createHTML(blogPost) {
 }
 
 const commentsUrl =
-  "https://peckish.lisa-noroff.no/wp-json/wp/v2/comments/" + id;
+  "https://peckish.lisa-noroff.no/wp-json/wp/v2/comments?post=" + id;
 
 async function createComment() {
   try {
@@ -123,11 +123,11 @@ async function createComment() {
 
     commentContainer.innerHTML = `<div class="comments">
   
-      <h4>${comments.author_name}</h4>
+      <h4>${comments[0].author_name}</h4>
 
-      <p>Published: ${comments.date}</p>
+      <p>Published: ${comments[0].date}</p>
   
-     <p> ${comments.content.rendered}</p>
+     <p> ${comments[0].content.rendered}</p>
   </div>
   `;
   } catch (error) {
