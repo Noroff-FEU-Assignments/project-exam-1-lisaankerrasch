@@ -237,6 +237,12 @@ input::placeholder {
     margin: 100px auto 100px;
 }
 
+.search-result-text p {
+    font-size: 18px;
+    text-align: center;
+    margin: 50px auto 100px;
+}
+
 .error {
     display: none;
     text-align: center;
@@ -766,7 +772,8 @@ input::placeholder {
 .portions,
 .time,
 .timer,
-.load-more {
+.load-more,
+.go-to-recipes {
     font-family: "Fira sans", sans-serif;
     text-align: center;
     height: auto;
@@ -796,7 +803,8 @@ input::placeholder {
     margin: 30px 0;
 }
 
-.load-more {
+.load-more,
+.go-to-recipes {
     background-color: #FFF476;
     border: none;
     width: 150px;
@@ -804,6 +812,14 @@ input::placeholder {
     font-weight: bold;
     cursor: pointer;
     margin: 30px auto;
+}
+
+.go-to-recipes {
+    margin: 30px auto 300px;
+}
+
+.go-to-recipes a:hover {
+    color: black;
 }
 
 .comment-container {
@@ -1062,6 +1078,7 @@ footer {
 .footer-item-1 {
     padding-top: 70px;
     padding-bottom: 30px;
+    max-width: max-content;
 }
 
 footer p {
@@ -1551,7 +1568,8 @@ footer p {
     .portions,
     .time,
     .timer,
-    .load-more {
+    .load-more,
+    .go-to-recipes {
         font-size: 14px;
         padding: 10px;
         margin-bottom: 10px;

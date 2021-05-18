@@ -63,8 +63,6 @@ async function getCarousel() {
 
     const blog = blogList;
 
-    console.log(blogList);
-
     for (let i = 0; i < blogList.length; i++) {
       if (i === 3) {
         break;
@@ -208,8 +206,6 @@ async function getPopular() {
 
     const blog = blogList;
 
-    console.log(blogList);
-
     for (let i = 0; i < blogList.length; i++) {
       if (i === 3) {
         break;
@@ -239,8 +235,6 @@ async function getDrinks() {
     const blogList = await response.json();
 
     const blog = blogList;
-
-    console.log(blogList);
 
     for (let i = 0; i < blogList.length; i++) {
       if (i === 4) {
