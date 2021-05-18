@@ -51,7 +51,7 @@ function submitForm(event) {
     checkSymbol1.style.display = "none";
     checkSymbol2.style.display = "none";
     form.classList.add("hiddenjs");
-    success.innerHTML = `<div class="message">Thank you for reaching out! We will be in touch with you shortly. </div>`;
+    success.innerHTML = `<div class="message">Thank you for subscribing! </div>`;
     form.reset();
   }
 }

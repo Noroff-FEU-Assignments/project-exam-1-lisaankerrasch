@@ -1104,11 +1104,16 @@ footer p {
 /* Hidden for desktop */
 
 
+
 /* Mobile */
 
 @media screen and (max-device-width: 1200px) {
 
     /* Hidden for mobile */
+
+    .desktop {
+        display: none;
+    }
 
     .slider-desktop {
         display: none;
