@@ -39,13 +39,14 @@ a {
     color: black;
 }
 
-p {
-    font-family: "Roboto condensed", sans-serif;
-    font-weight: 200;
-}
 
 a:hover {
     color: #FF8676;
+}
+
+p {
+    font-family: "Roboto condensed", sans-serif;
+    font-weight: 200;
 }
 
 .uppercase {
@@ -251,6 +252,7 @@ input::placeholder {
 
 
 /* Slider */
+
 .carousel-container {
     width: 80%;
     margin: 50px auto 0;
@@ -1254,6 +1256,10 @@ footer p {
 
     /* Index */
 
+    .index-header {
+        margin-bottom: 20px;
+    }
+
     .index-container {
         width: 80%;
         margin-top: 50px;
@@ -1305,7 +1311,6 @@ footer p {
     }
 
     .carousel-item {
-        width: 250px;
         padding: 30px;
     }
 
@@ -1329,10 +1334,9 @@ footer p {
 
     .popular-container,
     .drinks-container {
-        display: flex;
+        width: 100%;
         flex-direction: column;
-        justify-content: space-between;
-        margin-bottom: 30px;
+        margin: 0 auto 30px;
     }
 
     .popular-item,
@@ -1347,13 +1351,13 @@ footer p {
 
     .popular-img,
     .drinks-img {
-        max-width: 300px;
-        height: 300px;
+        max-width: 100%;
+        min-width: 100%;
     }
 
     .popular-title,
     .drinks-title {
-        max-width: 300px;
+        max-width: 100%;
         background-color: white;
         text-align: center;
     }
@@ -1652,6 +1656,10 @@ footer p {
         display: none;
     }
 
+    .modal-content {
+        max-width: 80%;
+    }
+
     /* Recipes */
 
     .recipe-flex {
@@ -1667,6 +1675,7 @@ footer p {
     }
 
     .popular-recipes {
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -1715,6 +1724,11 @@ footer p {
 
     /* Newsletter page */
 
+    .newsletter-page-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
     .newsletter-page-container {
         width: 80%;
         margin: 50px auto 100px;
@@ -1729,9 +1743,10 @@ footer p {
         padding-bottom: 20px;
     }
 
-    .modal-content {
-        max-width: 80%;
+    .signup-images img {
+        height: 200px;
     }
+
 
     /* Footer */
 
