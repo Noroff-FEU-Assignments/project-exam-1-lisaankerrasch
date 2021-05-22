@@ -1508,8 +1508,8 @@ footer p {
     }
 
     .about-flex img {
-        max-width: 100%;
-        object-fit: cover;
+        max-width: max-content;
+        height: 200px;
         padding-bottom: 20px;
     }
 
@@ -1520,7 +1520,7 @@ footer p {
     }
 
     .about-content p {
-        padding: 20px;
+        padding: 10px 20px;
     }
 
     /* Blog Page */
@@ -1653,7 +1653,8 @@ footer p {
     }
 
     .close {
-        display: none;
+        top: 8%;
+        right: 10%;
     }
 
     .modal-content {
